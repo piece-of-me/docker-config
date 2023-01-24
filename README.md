@@ -2,5 +2,5 @@
 
 * php
 * nginx
-* mysql
+* mysql / postgesql
 * adminer
