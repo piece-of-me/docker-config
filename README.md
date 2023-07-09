@@ -2,5 +2,5 @@
 
 * php
 * nginx
-* mysql / postgesql
+* mysql 8.0 / postgesql 15.0
 * adminer
