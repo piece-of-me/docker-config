@@ -19,6 +19,7 @@ services:
       dockerfile: _docker/app/Dockerfile
     volumes:
       - ./_docker/app/php.ini:/usr/local/etc/php/php.ini
+      - ./:/var/www
     depends_on:
       - server
       - database
