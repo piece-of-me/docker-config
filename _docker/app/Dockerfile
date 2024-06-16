@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
       git && \
 #      libjpeg62-turbo-dev \
 #      libfreetype6-dev && \
+#      pecl install xdebug && \
       docker-php-ext-install pdo_mysql && \
 #      docker-php-ext-install pdo_pgsql && \
       docker-php-ext-install bcmath && \
@@ -19,6 +20,7 @@ RUN apt-get update && apt-get install -y \
 #      docker-php-ext-configure gd --with-freetype --with-jpeg && \
 #      docker-php-ext-install gd && \
 #      docker-php-ext-enable gd && \
+#      docker-php-ext-enable xdebug && \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-
   server:
     container_name: server
     image: nginx:1.23
@@ -18,8 +17,11 @@ services:
       context: .
       dockerfile: _docker/app/Dockerfile
     volumes:
+      - ./:/var/www/
       - ./_docker/app/php.ini:/usr/local/etc/php/php.ini
-      - ./:/var/www
+      - ./_docker/app/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    extra_hosts:
+      - host.docker.internal:host-gateway
     depends_on:
       - server
       - database
