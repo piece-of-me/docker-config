@@ -35,7 +35,7 @@ services:
     # -----MySQL-----
     image: mysql:8.0
     volumes:
-      - ./_docker/tmp/db:/var/lib/mysqld
+      - ./_docker/tmp/db:/var/lib/mysql
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USERNAME}
