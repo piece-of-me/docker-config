@@ -35,14 +35,14 @@ services:
       - "8001:${DB_PORT}"
 
     # -----MySQL-----
-    image: mysql:8.0
-    volumes:
-      - ./_docker/tmp/db:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_USER: ${DB_USERNAME}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_ROOT_PASSWORD: root
+#    image: mysql:8.0
+#    volumes:
+#      - ./_docker/tmp/db:/var/lib/mysql
+#    environment:
+#      MYSQL_DATABASE: ${DB_DATABASE}
+#      MYSQL_USER: ${DB_USERNAME}
+#      MYSQL_PASSWORD: ${DB_PASSWORD}
+#      MYSQL_ROOT_PASSWORD: root
     # -----End MySQL-----
 
     # -----PostgreSQL-----
@@ -56,6 +56,18 @@ services:
     # -----End PostgreSQL-----
 
     restart: always
+
+#  meilisearch:
+#    container_name: meilisearch
+#    hostname: 'meilisearch'
+#    image: 'getmeili/meilisearch:latest'
+#    volumes:
+#      - './_docker/tmp/meilisearch:/meilisearch-data'
+#    depends_on:
+#      - database
+#    restart: always
+#    ports:
+#      - '8003:7700'
 
   adminer:
     container_name: adminer
