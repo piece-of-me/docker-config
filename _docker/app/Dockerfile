@@ -8,8 +8,10 @@ RUN apt-get update && apt-get install -y \
       zip unzip \
       git && \
 #      libjpeg62-turbo-dev \
-#      libfreetype6-dev && \
-#      pecl install xdebug && \
+#      libfreetype6-dev && \ 
+#      libmagickwand-dev && \ ## Imagick ##
+#      pecl install xdebug && \ 
+#      pecl install imagick && \ ## Imagick ##
 #      docker-php-ext-install pdo_mysql && \
 #      docker-php-ext-install pdo_pgsql && \
       docker-php-ext-install bcmath && \
@@ -21,6 +23,7 @@ RUN apt-get update && apt-get install -y \
 #      docker-php-ext-install gd && \
 #      docker-php-ext-enable gd && \
 #      docker-php-ext-enable xdebug && \
+#      docker-php-ext-enable imagick && \ ## Imagick ##
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
